@@ -1,0 +1,55 @@
+#body {
+	background-color: #203f5e;
+}
+
+.nav {
+	background-color: #288e98;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 48;
+}
+
+.title:hover {
+	color: #ccf7f1;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#heading {
+	font-family: "Comfortaa", cursive;
+}
+
+#conh {
+	color: #5ee7f4;
+	text-shadow: 2px 2px black;
+	font-weight: bold;
+}
+
+#sp {
+	padding: 1.25rem;
+}
+
+#meaning {
+	color: aqua;
+}
+
+#btn {
+	background-color: rgb(80, 80, 249);
+}
+
+#btn:hover {
+	background-color: lightskyblue;
+}
+
+#foot {
+	background-color: #203f5e;
+}
+
+#popbody {
+	background-color: #288e98;
+}
+
+#pophead{
+  background-color:white;
+}
