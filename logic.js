@@ -8,18 +8,6 @@ let but = document.getElementById("btn");
 
 let spin = document.getElementById("spin");
 
-let alerts = document.getElementById("alert");
-
-givealert = (text) => {
-	alerts.removeAttribute("hidden");
-
-	alerts.innerText = text;
-
-	setTimeout(function () {
-		alerts.setAttribute("hidden", "");
-	}, 2000);
-};
-
 // MEANING
 
 async function update() {
@@ -47,16 +35,13 @@ async function update() {
 			} else if (result.definition == undefined) {
 				para.innerText = "Please enter something...";
 				spin.removeAttribute("class");
-				givealert("Please enter something...");
 			} else {
 				para.innerText = "Please enter a valid word....";
 				spin.removeAttribute("class");
-				givealert("Please enter something valid...");
 			}
 		})
 		.catch(function () {
 			para.innerText = "Please enter valid word....";
-			givealert("Please enter something...");
 		});
 }
 
@@ -71,9 +56,15 @@ function google() {
 			`https://www.google.com/search?q=${input.value}+meaning&sxsrf=AJOqlzXwcE_9iOIWVkyRtLP5OROOPZq_LA%3A1674045079018&ei=l-bHY4BUuaGx4w_l8bGoAQ&ved=0ahUKEwjA-5byj9H8AhW5UGwGHeV4DBUQ4dUDCA8&oq=${input.value}+meaning&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQDEoECEEYAEoECEYYAFAAWABgAGgAcAF4AIABAIgBAJIBAJgBAA&sclient=gws-wiz-serp`
 		);
 	} else {
-		givealert("Please enter something...");
+		const toastLiveExample = document.getElementById("liveToast");
+
+		const toast = new bootstrap.Toast(toastLiveExample);
+
+		toast.show();
 		gog.removeAttribute("href");
 	}
 }
 
 gog.addEventListener("click", google);
+
+// POPOVER
